@@ -1,0 +1,361 @@
+.gem {
+    display: inline-block;
+    vertical-align: top;
+    width: 64px;
+    height: 64px;
+
+    border-radius: 3px;
+    background: url(gemstone_sprite.png?v) 64px 0 no-repeat;
+}
+
+.gem.bane-of-the-powerful {
+    background-position: 0 -936px;
+}
+
+.gem.bane-of-the-trapped {
+    background-position: -64px -936px;
+}
+
+.gem.enforcer {
+    background-position: -128px -936px;
+}
+
+.gem.gem-of-efficacious-toxin {
+    background-position: -192px -936px;
+}
+
+.gem.gogok-of-swiftness {
+    background-position: -256px -936px;
+}
+
+.gem.invigorating-gemstone {
+    background-position: -320px -936px;
+}
+
+.gem.mirinae-teardrop-of-the-starweaver {
+    background-position: -384px -936px;
+}
+
+.gem.moratorium {
+    background-position: -448px -936px;
+}
+
+.gem.pain-enhancer {
+    background-position: -512px -936px;
+}
+
+.gem.simplicitys-strength {
+    background-position: -576px -936px;
+}
+
+.gem.taeguk {
+    background-position: -640px -936px;
+}
+
+.gem.wreath-of-lightning {
+    background-position: 0 -1000px;
+}
+
+.gem.zeis-stone-of-vengeance {
+    background-position: -64px -1000px;
+}
+
+.gem.boon-of-the-hoarder {
+    background-position: -128px -1000px;
+}
+
+.gem.esoteric-alteration {
+    background-position: -192px -1000px;
+}
+
+.gem.gem-of-ease {
+    background-position: -256px -1000px;
+}
+
+.gem.molten-wildebeests-gizzard {
+    background-position: -320px -1000px;
+}
+
+.amethyst .gem.flawless-royal,
+[icon="amethyst_flawless-royal"]
+{
+    background-position: -10px -148px;
+}
+.gem
+
+.amethyst .gem.royal {
+    background-position: -602px -74px;
+}
+
+.amethyst .gem.flawless-imperial {
+    background-position: -528px -74px;
+}
+
+.amethyst .gem.imperial {
+    background-position: -454px -74px;
+}
+
+.amethyst .gem.marquise {
+    background-position: -380px -74px;
+}
+
+.amethyst .gem.radiant-star {
+    background-position: -306px -74px;
+}
+
+.amethyst .gem.perfect-star {
+    background-position: -232px -74px;
+}
+
+.amethyst .gem.flawless-star {
+    background-position: -158px -74px;
+}
+
+.amethyst .gem.star {
+    background-position: -84px -74px;
+}
+
+.amethyst .gem.radiant-square {
+    background-position: -10px -74px;
+}
+
+.amethyst .gem.perfect-square {
+    background-position: -602px -0px;
+}
+
+.amethyst .gem.flawless-square {
+    background-position: -528px -0px;
+}
+
+.diamond .gem.flawless-royal {
+    background-position: -84px -296px;
+}
+
+.diamond .gem.royal {
+    background-position: -10px -296px;
+}
+
+.diamond .gem.flawless-imperial {
+    background-position: -602px -222px;
+}
+
+.diamond .gem.imperial {
+    background-position: -528px -222px;
+}
+
+.diamond .gem.marquise {
+    background-position: -454px -222px;
+}
+
+.diamond .gem.radiant-star {
+    background-position: -380px -222px;
+}
+
+.diamond .gem.perfect-star {
+    background-position: -306px -222px;
+}
+
+.diamond .gem.flawless-star {
+    background-position: -232px -222px;
+}
+
+.diamond .gem.star {
+    background-position: -158px -222px;
+}
+
+.diamond .gem.radiant-square {
+    background-position: -84px -222px;
+}
+
+.diamond .gem.perfect-square {
+    background-position: -10px -222px;
+}
+
+.diamond .gem.flawless-square {
+    background-position: -602px -148px;
+}
+
+.emerald .gem.flawless-royal {
+    background-position: -158px -444px;
+}
+
+.emerald .gem.royal {
+    background-position: -84px -444px;
+}
+
+.emerald .gem.flawless-imperial {
+    background-position: -10px -444px;
+}
+
+.emerald .gem.imperial {
+    background-position: -602px -370px;
+}
+
+.emerald .gem.marquise {
+    background-position: -528px -370px;
+}
+
+.emerald .gem.radiant-star {
+    background-position: -454px -370px;
+}
+
+.emerald .gem.perfect-star {
+    background-position: -380px -370px;
+}
+
+.emerald .gem.flawless-star {
+    background-position: -306px -370px;
+}
+
+.emerald .gem.star {
+    background-position: -232px -370px;
+}
+
+.emerald .gem.radiant-square {
+    background-position: -158px -370px;
+}
+
+.emerald .gem.perfect-square {
+    background-position: -84px -370px;
+}
+
+.emerald .gem.flawless-square {
+    background-position: -10px -370px;
+}
+
+.ruby .gem.flawless-royal {
+    background-position: -232px -592px;
+}
+
+.ruby .gem.royal {
+    background-position: -158px -592px;
+}
+
+.ruby .gem.flawless-imperial {
+    background-position: -84px -592px;
+}
+
+.ruby .gem.imperial {
+    background-position: -10px -592px;
+}
+
+.ruby .gem.marquise {
+    background-position: -602px -518px;
+}
+
+.ruby .gem.radiant-star {
+    background-position: -528px -518px;
+}
+
+.ruby .gem.perfect-star {
+    background-position: -454px -518px;
+}
+
+.ruby .gem.flawless-star {
+    background-position: -380px -518px;
+}
+
+.ruby .gem.star {
+    background-position: -306px -518px;
+}
+
+.ruby .gem.radiant-square {
+    background-position: -232px -518px;
+}
+
+.ruby .gem.perfect-square {
+    background-position: -158px -518px;
+}
+
+.ruby .gem.flawless-square {
+    background-position: -84px -518px;
+}
+
+.topaz .gem.flawless-royal {
+    background-position: -306px -740px;
+}
+
+.topaz .gem.royal {
+    background-position: -232px -740px;
+}
+
+.topaz .gem.flawless-imperial {
+    background-position: -158px -740px;
+}
+
+.topaz .gem.imperial {
+    background-position: -84px -740px;
+}
+
+.topaz .gem.marquise {
+    background-position: -10px -740px;
+}
+
+.topaz .gem.radiant-star {
+    background-position: -602px -666px;
+}
+
+.topaz .gem.perfect-star {
+    background-position: -528px -666px;
+}
+
+.topaz .gem.flawless-star {
+    background-position: -454px -666px;
+}
+
+.topaz .gem.star {
+    background-position: -380px -666px;
+}
+
+.topaz .gem.radiant-square {
+    background-position: -306px -666px;
+}
+
+.topaz .gem.perfect-square {
+    background-position: -232px -666px;
+}
+
+.topaz .gem.flawless-square {
+    background-position: -158px -666px;
+}
+
+.gem.gold {
+    background-position: -380px -740px;
+}
+
+.gem.time {
+    background-position: -455px -743px;
+}
+
+.gem.breath {
+    background-position: -527px -742px;
+}
+
+.gem-small {
+    background: url(gemstone_sprite.png?v2) 0 0 no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    width: 32px;
+    height: 32px;
+}
+
+.gem-small.amethyst {
+    background-position: 0 -819px;
+}
+
+.gem-small.diamond {
+    background-position: -50px -819px;
+}
+
+.gem-small.emerald {
+    background-position: -100px -819px;
+}
+
+.gem-small.ruby {
+    background-position: -150px -819px;
+}
+
+.gem-small.topaz {
+    background-position: -200px -819px;
+}
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="D3C_0.1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+
+    <link rel="stylesheet" href="bower_components/material-design-icons/sprites/svg-sprite/svg-sprite-av.css">
+    <link rel="stylesheet" href="img/png-sprite/gemstone_sprite.css">
+
+    <link rel="stylesheet" href="app.css">
+
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body >
+<div ng-controller="MainViewCtrl" layout="column">
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+            <md-toolbar>
+                <h1 class="md-toolbar-tools">Sidenav Left</h1>
+
+            </md-toolbar>
+            <md-content ng-controller="LeftCtrl" class="md-default-theme">
+                <md-list>
+                    <md-item ng-repeat="char in charData">
+                        <md-button ng-class="{'selected' : char === selectedChar }" ng-click="changeViewTo(char)">
+                            <md-icon md-svg-icon="{{char.id}}" class="avatar"></md-icon>
+                            {{char.title}}
+                        </md-button>
+                    </md-item>
+                </md-list>
+                <md-button ng-click="close()" class="md-primary" hide-gt-md>
+                    Close Sidenav Left
+                </md-button>
+
+
+            </md-content>
+        </md-sidenav>
+        <md-content flex>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <button class="md-button md-default-theme" hide-gt-md ng-click="toggleLeftSidebar()">
+                <md-icon style="color: rgba(255,255,255,0.87);" md-svg-icon="navigation:ic_menu_24px"></md-icon>
+                </button>
+                &nbsp;&nbsp;
+                <span>Toolbar</span>
+
+
+                <div layout="row" flex class="fill-height">
+                    <div class="md-toolbar-item md-tools">
+
+                        <button class="md-button md-default-theme additional_calc-btn" ng-click="showGridBottomSheet($event)">
+                            &nbsp;
+                            <span class="btn-txt">addit.Calcs</span>
+                            <md-icon style="color: rgba(255,255,255,0.87);" md-svg-icon="navigation:ic_menu_24px"></md-icon>
+                        </button>
+                        <button class="md-button md-default-theme" ng-click="toggleRightSidebar()">
+                            <md-icon style="color: rgba(255,255,255,0.87);" md-svg-icon="navigation:ic_menu_24px"></md-icon>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </md-toolbar>
+        <md-content flex>
+            <div ng-view layout="column" layout-fill></div>
+
+
+
+        </md-content>
+        </md-content>
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+            <md-toolbar class="md-theme-light">
+                <h1 class="md-toolbar-tools">Sidenav Right</h1>
+            </md-toolbar>
+            <md-content ng-controller="RightCtrl">
+
+                <md-list>
+                    <md-item ng-repeat="ele in rightSidebarElements">
+                        <md-button class="md-accent" ng-click="changeViewTo(ele)">
+                            &nbsp;
+                            <md-icon md-svg-icon="{{ele.icon}}"></md-icon>
+                            {{ele.name}}
+                        </md-button>
+                    </md-item>
+                </md-list>
+
+                <md-button ng-click="close()" class="md-primary">
+                    Close Sidenav Right
+                </md-button>
+            </md-content>
+        </md-sidenav>
+    </section>
+
+
+
+    <!--<div>
+
+        <md-content >
+            <md-toolbar>
+                <h2 class="md-toolbar-tools">
+                    <span>Toolbar</span>
+                </h2>
+            </md-toolbar>
+
+            <section layout="row" layout-margin layout-fill layout-padding5 layout-sm="column">
+
+                <md-button flex class="md-raised md-button md-default-theme" ng-href="#/{{char.url}}" aria-label="{{char.title}}" ng-repeat="char in charData">
+                    <md-tooltip>
+                        <md-icon class="char-icon" md-svg-icon="{{char.id}}"></md-icon>
+                    </md-tooltip>
+                    {{char.title}}
+                    </md-icon>
+                </md-button>
+            </section>
+        </md-content>
+
+        <md-content class="md-padding" style="height: 600px;padding: 24px;">
+            <div ng-view></div>
+        </md-content>
+
+    </div>-->
+
+    <!--<ul class="menu">
+        <li><a href="#/view1">view1</a></li>
+        <li><a href="#/view2">view2</a></li>
+    </ul>-->
+</div>
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+
+
+  <!--<div>Angular seed app: v<span app-version></span></div>-->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+
+
+
+
+  <script src="app.js"></script>
+  <script src="views/chars/barb/charBarbView.js"></script>
+  <script src="views/chars/crusader/charCrusaderView.js"></script>
+    <script src="views/calcTabs/generalCalcTab.js"></script>
+    <script src="views/additionalCalculations/gemCraft/gemCraft.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
