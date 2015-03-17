@@ -16,7 +16,7 @@ var d3c_module = angular.module('D3C_0.1', [
         };
     })
 
-    .controller('MainViewCtrl', function ($rootScope, $scope, $timeout, $mdSidenav, $log, $mdBottomSheet) {
+    .controller('MainViewCtrl', function ($rootScope, $scope, $timeout, $mdSidenav, $log, $mdBottomSheet,$http) {
 
         $scope.generalCalcTabViewUrl="views/calcTabs/generalCalcTab.html";
 
@@ -32,6 +32,34 @@ var d3c_module = angular.module('D3C_0.1', [
                     $log.debug("toggle RIGHT is done");
                 });
         };
+
+        console.log(D3API);
+        D3API.setServer('eu');
+        D3API.setLocale('de_DE');
+        D3API.getCareer({
+            battletagName: 'Lanzdance',
+            battletagCode: '2761',
+            success: function (data) {
+                console.log(data);
+                D3API.getHero({
+                    battletagName: 'Lanzdance',
+                    battletagCode: '2761',
+                    heroId: data.heroes[0].id,
+                    success: function(data){console.log(data)}
+
+                });
+
+            }
+
+        });
+
+        D3API.getItem({
+            item: 'CokBCOTjv4kPEgcIBBXEFj-7HRtdz0QdgGZcRh2cBgDLHcCullEdyvq8oDCLHjjoAkAAUBJYBGDoAmorCgwIABCE0I2xgYCAoBESGwidqYefDBIHCAQVI5aumDCPEjgAQAFYBJABAoABRo0BSpuSvaUBnAYAy60Bnk-D3LUBDyJX6rgBpsfS7A3AAS4Y96SHzAhQAFgC',
+            success: function(data){console.log(data);}
+        });
+
+
+
 
 
 

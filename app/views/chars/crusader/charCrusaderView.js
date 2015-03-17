@@ -15,6 +15,12 @@ angular.module('charCrusaderView', ['ngRoute','ngMaterial'])
     .controller('charCrusaderCtrl', function ($scope, $log) {
 
 
+        D3API.getCareer({
+            battletagName: 'Milfship',
+            battletagCode: '2334',
+            success: function(data){console.log(data)}
+
+        });
 
 
 

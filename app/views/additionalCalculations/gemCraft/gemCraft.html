@@ -1,12 +1,91 @@
 <div ng-controller="gemCraftCtrl" class="char-view tabsdemoStaticTabs" layout="column">
     <md-content class="content-back-body md-padding">
-        Craft Target
-        <md-button class="md-accent" ng-click="showGridBottomSheet($event)" >
+        <!--<div layout="row" layout-align="center center">
+            <div>
+            Craft Target
+            <md-button class="md-accent" ng-click="showGridBottomSheet($event)" >
             <span class="amethyst">
                 <span class="gem flawless-royal" data-gold="500000" data-breath="1"></span>
             </span>
 
-        </md-button>
+            </md-button>
+            </div>
 
+        <div>
+            Craft Source
+            <md-button class="md-accent" ng-click="showGridBottomSheet($event)" >
+            <span class="amethyst">
+                <span class="gem flawless-royal" data-gold="500000" data-breath="1"></span>
+            </span>
+
+            </md-button>
+        </div>
+
+        <div>
+            Additional Gems
+            <md-button class="md-accent" ng-click="showGridBottomSheet($event)" >
+            <span class="amethyst">
+                <span class="gem flawless-royal" data-gold="500000" data-breath="1"></span>
+            </span>
+
+            </md-button>
+            <md-button class="md-accent" ng-click="showGridBottomSheet($event)" >
+            <span class="amethyst">
+                <span class="gem flawless-royal" data-gold="500000" data-breath="1"></span>
+            </span>
+
+            </md-button>
+            <md-button class="md-accent" ng-click="showGridBottomSheet($event)" >
+            <span class="amethyst">
+                <span class="gem flawless-royal" data-gold="500000" data-breath="1"></span>
+            </span>
+
+            </md-button>
+        </div>
+        </div>-->
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>Craft Target</td>
+                <td>
+                    <md-button class="md-accent" ng-click="showGridBottomSheet($event,craftTarget)">
+                        <span class="{{craftTarget.icon.gemCategory}}">
+                            <span class="gem {{craftTarget.icon.gemTyp}}" data-gold="500000" data-breath="1"></span>
+                        </span>
+                    </md-button>
+                </td>
+            </tr>
+            <tr>
+                <td>Craft Source</td>
+                <td>
+                    <md-button class="md-accent" ng-click="showGridBottomSheet($event,craftSource)" >
+                        <span class="{{craftSource.icon.gemCategory}}">
+                            <span class="gem {{craftSource.icon.gemTyp}}" data-gold="500000" data-breath="1"></span>
+                        </span>
+
+                    </md-button>
+                </td>
+            </tr>
+            <tr>
+                <td>Additional Gems</td>
+                <td>
+
+                <md-button class="md-accent" ng-click="showGridBottomSheet($event,gem)" ng-repeat="gem in additionalGems">
+                    <span class="{{gem.icon.gemCategory}}">
+                        <span class="gem {{gem.icon.gemTyp}}" data-gold="500000" data-breath="1"></span>
+                    </span>
+                </md-button>
+
+
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+        <a xmlns="http://www.w3.org/1999/xhtml" href="http://us.battle.net/d3/en/item/CokBCOTjv4kPEgcIBBXEFj-7HRtdz0QdgGZcRh2cBgDLHcCullEdyvq8oDCLHjjoAkAAUBJYBGDoAmorCgwIABCE0I2xgYCAoBESGwidqYefDBIHCAQVI5aumDCPEjgAQAFYBJABAoABRo0BSpuSvaUBnAYAy60Bnk-D3LUBDyJX6rgBpsfS7A3AAS4Y96SHzAhQAFgC">item</a>
     </md-content>
 </div>

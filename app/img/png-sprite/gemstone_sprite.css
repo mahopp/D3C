@@ -81,17 +81,19 @@
 {
     background-position: -10px -148px;
 }
-.gem
 
-.amethyst .gem.royal {
+.amethyst .gem.royal,
+[icon="amethyst_royal"] {
     background-position: -602px -74px;
 }
 
-.amethyst .gem.flawless-imperial {
+.amethyst .gem.flawless-imperial,
+[icon="amethyst_flawless-imperial"] {
     background-position: -528px -74px;
 }
 
-.amethyst .gem.imperial {
+.amethyst .gem.imperial,
+[icon="amethyst_imperial"] {
     background-position: -454px -74px;
 }
 
@@ -127,7 +129,8 @@
     background-position: -528px -0px;
 }
 
-.diamond .gem.flawless-royal {
+.diamond .gem.flawless-royal,
+{
     background-position: -84px -296px;
 }
 
