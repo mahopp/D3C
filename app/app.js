@@ -59,6 +59,11 @@ var d3c_module = angular.module('D3C_0.1', [
         });
 
 
+        $http.get('http://us.battle.net/d3/en/tooltip/recipe/marquise-amethyst?format=jsonp').then(function (data){
+            console.log(data);
+        });
+
+
 
 
 
@@ -149,7 +154,10 @@ var d3c_module = angular.module('D3C_0.1', [
 
 
 
-    .config(['$mdThemingProvider','$routeProvider', '$mdIconProvider', function ($mdThemingProvider,$routeProvider, $mdIconProvider) {
+    .config(['$httpProvider','$mdThemingProvider','$routeProvider', '$mdIconProvider', function ($httpProvider,$mdThemingProvider,$routeProvider, $mdIconProvider) {
+
+
+
         $mdThemingProvider.theme('default')
 
             .primaryPalette('grey')
